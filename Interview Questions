@@ -86,13 +86,9 @@ but instead was able to easily filter through and find what I was looking for. O
 activity in question via Metricbeat, I was then able to use the system logs collected by 
 filebeat to review the incident.
 
-  
-How did you use these tools to find the log data? E.g., which charts, graphs, etc. were useful for parsing the logs?
-Identify Advantages and Disadvantages of the Solution
+The charts I used where heatlamps, maps, bph, and the filter options as well as the syslogs ability once I defined my search.
 
 
-What kinds of data did you not inspect during Project 1?
-Would having access to this additional data have changed your process or conclusions? If so, how?
 
 
 
