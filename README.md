@@ -7,7 +7,7 @@ Photos/NetworkDiagram.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible Playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  Ansible Playbook
+Playbooks/AnsiblePlaybook.txt
 
 This document contains the following details:
 - Description of the Topology
@@ -29,7 +29,6 @@ Filebeat is the first application I installed, it monitors specified logs and re
 Metric beat collects and reports periodically on metrics from the system and services running on them.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
