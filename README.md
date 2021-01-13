@@ -3,11 +3,11 @@
 
 The files in this repository were used to configure the network depicted below.
 
-Photos/NetworkDiagram.png
+https://github.com/Jackson593/Cyber/blob/main/Photos/NetworkDiagram.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible Playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-Playbooks/AnsiblePlaybook.txt
+https://github.com/Jackson593/Cyber/blob/main/Playbooks/Ansible%20Playbook.txt
 
 This document contains the following details:
 - Description of the Topology
@@ -68,7 +68,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+https://github.com/Jackson593/Cyber/blob/main/Photos/docker_ps.png
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -86,4 +86,4 @@ Metricbeat is a service quite similar to Filebeat however it monitors for system
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: .
 
-The playbook is the *FILL IN LATER*, it should be copied to /etc/ansible/<file> within the ansible docker.The file needs to be updated as soon at the beginning of this document to reflect the IP addresses of the systems for it to be used on in the hosts file. In order to check the server is running go to http://<IP-Address>/app/kibana
+The playbook is the AnsiblePlaybook.yml, it should be copied to /etc/ansible/<file> within the ansible docker.The file needs to be updated as soon at the beginning of this document to reflect the IP addresses of the systems for it to be used on in the hosts file. In order to check the server is running go to http://<IP-Address>/app/kibana
