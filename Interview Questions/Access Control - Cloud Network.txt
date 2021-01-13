@@ -1,0 +1,35 @@
+#### Question 2
+
+  Cloud Deployment has several benefits as well as several negative outcomes 
+for its use. It can help protect privacy, shift the physical infrastructure needs 
+and be a safe way of separating local and virtual data. In my project, I used 
+the cloud entirely for the deployment of my server. The way I connected the system 
+was all through the initial Jumpbox. Once ssh’d into that you could then
+access the various different components in the virtual structure. In order to 
+keep this secure, I build my firewall very specifically so that connections to the 
+network is blocked unless from connection to all IP addresses except my personal IP 
+I used to build the VN. This hence kept the other servers safe from most attacks.
+
+  The way I configured this was through a combination of load balancer rules 
+and network security groups. Through the use of NSGs I was able to apply 
+the same security rules to multiple VMs, therefore, saving time without losing 
+security for building individual rule sets for each VM. I did this by allowing the 
+NSG for jumpbox, Web 1, Web 2, and Web 3, to allow SSH only from the IP 
+of my personal network to the jumpbox’s IP with TCP protocols. Following 
+that I allowed the load balancer to be able to allow my personal IP to connect 
+to its IP address with TCP protocols once again. While then denying all other 
+traffic to the network. The other NSG I created was for my Elk VM. This game 
+me access to port 5601 so that I was able to use Kibana to monitor my 
+system. I didn’t want to unlock this port for all of my VMs however, being this 
+would leave more ports open than absolutely needed leaving a security 
+concern. I still needed to be able to connect all the VMs together tho so they 
+can SSH over the virtual network
+
+  The solution I created however scaleable can be done an easier way for a 
+large corporate structure through a VPN being you would only have to 
+connect to the network to gain access to these different machines. VPNs are 
+far easier to use for scaling however are more complex to initially set up and 
+for the size of my project I didn’t see the need. The benefits to using them 
+however they are typically much more secure even if they are broken into. 
+VPNs are best used to protect data from multiple locations where you can’t 
+always control everything in a network such as BIOB policies.

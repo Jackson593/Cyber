@@ -1,0 +1,34 @@
+####Question 1
+  
+  Ensuring SSH traffic is limited to the individuals who need to have access is critical to
+the security of not just information of the servers, but the continued operation of them itself. 
+A way I limited this was only allowing SSH from the web into a specific jump box limited by 
+the firewall to my personal IP address and from there, then gave the ability to SSH into the 4 
+different servers via that jump box server. That way you cannot gain access to the system 
+unless your logging in directly to that jump box. This is important because it limits avenues of 
+attack and ensures only individuals on my IP that are trying to log into the jump box 
+specifically have access to the system. Any other attempted logins would be denied with a 
+“timed out” error message. This is because those other servers do not have direct ssh 
+access to port 22 from the internet and can only be accessed via the jump box.
+
+  If there was an issue where one or all of the other machines was accepting ssh 
+connections it would most likely be due to a flat configuration of the firewalls rules. It would 
+be best to then double-check the rules that allow ssh connections into the network and the 
+deny all rule, making sure that only the exceptions I made in the firewall would be let 
+through. The best way to test this would be through trying to both ssh into the jumpbox via a 
+different IP address as well as attempting to ssh’ing into any of the other VM’s.
+
+
+  The first step would be to look into the Network Security Group and see which rules 
+regulate ssh traffic into the network. Once in the NSG rules I would then look into the configuration
+of the rules that allow SSH connections and check the source and destination IP’s as well as 
+the ports that allow ssh connections to the network.
+
+  The best way to then test the rules have taken effect is to simply try to connect to the various 
+VM’s this can be done by attempting SSH’s both from my personal IP and a different IP. the 
+only valid connection should be the SSH from my personal machine into the jumpbox.
+This of course does not leave the system immune to attack and unauthorized access. 
+It simply limits the avenues of breaking into the system that still indeed can be 
+brute-forced through. A way we can monitor this however is through the configuration 
+of services running to Kibana this will be able to be monitored, hence giving us the 
+ability to respond before the attack is successful. 
